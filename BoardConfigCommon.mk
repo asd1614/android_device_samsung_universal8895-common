@@ -42,7 +42,8 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := exynos-m1
+TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT_RUNTIME := exynos-m1
 
 # Secondary Architecture
 TARGET_2ND_ARCH := arm
@@ -139,6 +140,9 @@ WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 
 # MACLOADER
 BOARD_HAVE_SAMSUNG_WIFI          := true
+
+# HIDL
+DEVICE_MANIFEST_FILE             := $(LOCAL_PATH)/manifest.xml
 
 # SEPOLICY
 include device/lineage/sepolicy/exynos/sepolicy.mk
